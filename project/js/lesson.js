@@ -5,10 +5,10 @@ const phoneResult = document.querySelector("#phone_result")
 const regExp = /^\+996 [2579]\d{2} \d{2}-\d{2}-\d{2}$/
 
 phoneButton.onclick = () => {
-    if (regExp.test(phoneInput.value)){
+    if (regExp.test(phoneInput.value)) {
         phoneResult.innerHTML = "ok"
         phoneResult.style.color = "green"
-    }else {
+    } else {
         phoneResult.innerHTML = "not ok"
         phoneResult.style.color = "red"
     }
@@ -19,6 +19,7 @@ phoneButton.onclick = () => {
 const tabContentBlocks = document.querySelectorAll(".tab_content_block")
 const tabContentItems = document.querySelectorAll(".tab_content_item")
 const tabsParent = document.querySelector(".tab_content_items")
+let indexq = 0
 const hideTabContent = () => {
     tabContentBlocks.forEach((item) => {
         item.style.display = "none"
@@ -31,12 +32,13 @@ const hideTabContent = () => {
 const showTabContent = (index = 0) => {
     tabContentBlocks[index].style.display = "block"
     tabContentItems[index].classList.add("tab_content_item_active")
+    index = indexq
 }
 hideTabContent()
 showTabContent()
 tabsParent.onclick = (event) => {
     if (event.target.classList.contains('tab_content_item')) {
-        tabContentItems.forEach((item , index) =>{
+        tabContentItems.forEach((item, index) => {
             if (event.target === item) {
                 hideTabContent()
                 showTabContent(index)
@@ -44,3 +46,16 @@ tabsParent.onclick = (event) => {
         })
     }
 }
+
+
+const intervalTabs = () => {
+    setInterval(() => {
+        indexq++
+        if (indexq > tabContentBlocks.length - 1) {
+            indexq = 0
+        }
+        hideTabContent()
+        showTabContent(indexq)
+    }, 3000)
+}
+intervalTabs()
