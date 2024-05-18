@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Satoru Gojo",
+    "status": "unknown",
+    "age": 29,
+    "photo": "https://m.media-amazon.com/images/I/71x-8nfmMmL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "name": "Yuta Okkotsu",
+    "status": "alive",
+    "age": 17,
+    "photo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2430d959-ea06-470f-a7c4-45c9d358e25f/dggigdz-3117cfd7-4b7f-48b1-9288-6769f8ec59ac.png/v1/fill/w_1280,h_1185,q_80,strp/yuta_okkotsu_by_ranshiiki_dggigdz-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE4NSIsInBhdGgiOiJcL2ZcLzI0MzBkOTU5LWVhMDYtNDcwZi1hN2M0LTQ1YzlkMzU4ZTI1ZlwvZGdnaWdkei0zMTE3Y2ZkNy00YjdmLTQ4YjEtOTI4OC02NzY5ZjhlYzU5YWMucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.AO6d3L6HbFqNS9SnKJ7O859NZaLLsNqVaVKjBC70gOQ"
+  },
+  {
+    "name": "Ryomen Sukuna",
+    "status": "alive?",
+    "age": 1000,
+    "photo":"https://www.inspireuplift.com/resizer/?image=https://cdn.inspireuplift.com/uploads/images/seller_products/31564/1702649768_sukunatrueform.png&width=600&height=600&quality=90&format=auto&fit=pad"
+  }
+]

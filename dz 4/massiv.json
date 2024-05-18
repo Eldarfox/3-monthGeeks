@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Satoru Gojo",
+    "status": "unknown",
+    "age": 29
+  },
+  {
+    "name": "Yuta Okkotsu",
+    "status": "alive",
+    "age": 17
+  },
+  {
+    "name": "Ryomen Sukuna",
+    "status": "alive?",
+    "age": 1000
+  }
+]
