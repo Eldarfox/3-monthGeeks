@@ -1,0 +1,10 @@
+.all {
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    border: 1px solid black;
+}
+.all2 {
+    background-color: blue;
+    border: 1px solid orange;
+}
