@@ -59,3 +59,43 @@ const intervalTabs = () => {
     }, 3000)
 }
 intervalTabs()
+
+//convertor
+
+const usdInput = document.querySelector("#usd")
+const somInput = document.querySelector("#som")
+const eurInput = document.querySelector("#eur")
+
+const converter  = (element, targetElement , thirdElement) => {
+    element.oninput = () => {
+        const request = new XMLHttpRequest()
+        request.open("GET" , "../data/convertor.json    ")
+        request.setRequestHeader("Content-type", "application/json")
+        request.send()
+
+        request.onload = () => {
+            const data = JSON.parse(request.response)
+            if (element.id === "som"){
+                targetElement.value = (element.value / data.usd).toFixed(2)
+                thirdElement.value = (element.value / data.eur).toFixed(2)
+            }
+            if (element.id === "usd"){
+                targetElement.value = (element.value * data.usd).toFixed(2)
+                thirdElement.value = (element.value * data.eurusd).toFixed(2)
+            }
+            if (element.id === "eur"){
+                targetElement.value = (element.value * data.eur).toFixed(2)
+                thirdElement.value = (element.value / data.eurusd).toFixed(2)
+            }
+            if (element.value === ""){
+                targetElement.value = ""
+                thirdElement.value = ""
+            }
+        }
+    }
+}
+converter(somInput, usdInput , eurInput)
+converter(usdInput, somInput , eurInput)
+converter(eurInput, somInput , usdInput)
+
+
