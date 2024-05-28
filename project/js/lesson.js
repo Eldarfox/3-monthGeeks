@@ -66,37 +66,38 @@ const usdInput = document.querySelector("#usd")
 const somInput = document.querySelector("#som")
 const eurInput = document.querySelector("#eur")
 
-const converter  = (element, targetElement , thirdElement) => {
-    element.oninput = () => {
-        const request = new XMLHttpRequest()
-        request.open("GET" , "../data/convertor.json    ")
-        request.setRequestHeader("Content-type", "application/json")
-        request.send()
-
-        request.onload = () => {
-            const data = JSON.parse(request.response)
-            if (element.id === "som"){
-                targetElement.value = (element.value / data.usd).toFixed(2)
-                thirdElement.value = (element.value / data.eur).toFixed(2)
-            }
-            if (element.id === "usd"){
-                targetElement.value = (element.value * data.usd).toFixed(2)
-                thirdElement.value = (element.value * data.eurusd).toFixed(2)
-            }
-            if (element.id === "eur"){
-                targetElement.value = (element.value * data.eur).toFixed(2)
-                thirdElement.value = (element.value / data.eurusd).toFixed(2)
-            }
-            if (element.value === ""){
-                targetElement.value = ""
-                thirdElement.value = ""
-            }
+const converter = (element, targetElement, thirdElement) => {
+    element.oninput = async () => {
+        try {
+            fetch(`../data/convertor.json`)
+                .then(res => res.json())
+                .then(data => {
+                    if (element.id === "som") {
+                        targetElement.value = (element.value / data.usd).toFixed(2)
+                        thirdElement.value = (element.value / data.eur).toFixed(2)
+                    }
+                    if (element.id === "usd") {
+                        targetElement.value = (element.value * data.usd).toFixed(2)
+                        thirdElement.value = (element.value * data.eurusd).toFixed(2)
+                    }
+                    if (element.id === "eur") {
+                        targetElement.value = (element.value * data.eur).toFixed(2)
+                        thirdElement.value = (element.value / data.eurusd).toFixed(2)
+                    }
+                    if (element.value === "") {
+                        targetElement.value = ""
+                        thirdElement.value = ""
+                    }
+                })
+        }catch (e){
+            console.log(e)
         }
     }
 }
-converter(somInput, usdInput , eurInput)
-converter(usdInput, somInput , eurInput)
-converter(eurInput, somInput , usdInput)
+
+converter(somInput, usdInput, eurInput)
+converter(usdInput, somInput, eurInput)
+converter(eurInput, somInput, usdInput)
 
 
 //card switcher
@@ -105,7 +106,8 @@ const btnNext = document.querySelector("#btn-next")
 const btnPrev = document.querySelector("#btn-prev")
 let cardId = 1
 
-const updateCard = (id) => {
+const updateCard = async (id) => {
+    try {
     fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
         .then(response => response.json())
         .then(data => {
@@ -117,6 +119,9 @@ const updateCard = (id) => {
                 <span>${id}</span>
             `
         })
+    }catch (e){
+        console.log(e)
+    }
 }
 
 btnNext.onclick = () => {
@@ -135,3 +140,27 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     .then(data => {
         console.log(data)
     })
+
+
+//WEATHER
+
+const citySearchInput = document.querySelector(".cityName")
+const cityName = document.querySelector(".city")
+const cityTemp = document.querySelector(".temp")
+const weatherBlock = document.querySelector(".icon_weather")
+const url = 'http://api.openweathermap.org/data/2.5/weather'
+const api = 'e417df62e04d3b1b111abeab19cea714'
+const citySearch = () => {
+    citySearchInput.oninput = (event) => {
+        fetch(`${url}?q=${event.target.value}&appid=${api}`)
+            .then(response => response.json())
+            .then(data => {
+                cityName.innerHTML = data.name || 'City is not defined'
+                cityTemp.innerHTML = data.main?.temp ? Math.round(data.main.temp - 273) + "&deg;c" : '-'
+                weatherBlock.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+            })
+    }
+}
+
+citySearch()
+
