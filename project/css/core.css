@@ -11,7 +11,7 @@
 
 body {
     font-family: "Britannic Bold", sans-serif;
-    background: #c2d0d0;
+    background: rgb(0, 191, 255);
 }
 
 .btn {
@@ -30,7 +30,7 @@ body {
 }
 
 .btn:active {
-    background: #56585D;
+    background: rgb(0, 191, 255);
     border: 2px solid var(--orange);
 }
 
@@ -120,6 +120,6 @@ input {
 }
 
 :root {
-    --orange: orange;
+    --orange: #ffa900;
     --black: black;
 }

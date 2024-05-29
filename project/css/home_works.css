@@ -2,7 +2,10 @@
 /* GMAIL BLOCK */
 
 .gmail_block {
-    background: black;
+    background-image: url("https://wallpaper.forfun.com/fetch/97/978ad930a1ab42ba440ff1d1649cc362.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 100px 0;
 }
 
@@ -64,7 +67,7 @@
 /*-------STOP WATCH------ */
 
 .time {
-    color: white;
+    color: #ff8800;
     display: flex;
     justify-content: center;
     font-size: 80px;
@@ -82,7 +85,10 @@
 
 .stopwatch {
     padding: 100px 0;
-    background: black;
+    background-image: url("https://sotni.ru/wp-content/uploads/2023/08/vrata-shteina-okabe-oboi-1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .time_buttons {

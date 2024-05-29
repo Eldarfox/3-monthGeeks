@@ -55,7 +55,9 @@
 
 .main_block {
     padding: 100px 0;
-    background: black;
+    background-image: url("https://kartinki.pics/uploads/posts/2021-07/1625731724_20-kartinkin-com-p-vrata-shteina-oboi-krasivie-24.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* BUTTONS COLOR PICKER */
@@ -153,7 +155,7 @@
 /* VIDEO BLOCK */
 
 .block_video {
-    background: black;
+    background: rgb(0, 191, 255);
     padding: 100px 0;
 }
 

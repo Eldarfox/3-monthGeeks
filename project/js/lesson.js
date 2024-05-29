@@ -14,7 +14,7 @@ phoneButton.onclick = () => {
     }
 }
 
-//tavslider
+//tabSlider
 
 const tabContentBlocks = document.querySelectorAll(".tab_content_block")
 const tabContentItems = document.querySelectorAll(".tab_content_item")

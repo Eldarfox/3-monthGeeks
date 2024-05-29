@@ -20,8 +20,7 @@ const setRandomColors = () => {
         }
     })
 }
-
-window.onload = () => setRandomColors()
+setRandomColors()
 window.onkeydown = (event) => {
     if (event.code.toLowerCase() === 'space') {
         event.preventDefault()
