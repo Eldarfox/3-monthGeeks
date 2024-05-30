@@ -9,7 +9,7 @@ const cards = async () => {
                     maket.setAttribute("class", "maket");
                     maket.innerHTML = `
                         <div class="ph">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3XeKXPIxJP-R6Hg0d2x2DCxnKV_sT04umGCOTuiNIQ&s" alt="${pers.id}">
+                            <img src="https://avatars.dzeninfra.ru/get-zen_doc/1077599/pub_61c87ca64d08f2221db20ecb_61ca0105763d9601ffc09cad/scale_1200" alt="${pers.id}">
                         </div>
                         <h2>${pers.title}</h2>
                         <span class="tbody">age: ${pers.body}</span><br>

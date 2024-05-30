@@ -2,7 +2,7 @@
 
 .header {
     height: 80px;
-    background: #2c2d2f;
+    background-image: url("https://gepig.com/game_cover_bg_1190w/5449.jpg");
     display: flex;
     align-items: center;
     width: 100%;
@@ -43,7 +43,7 @@
 }
 
 .menu_link a {
-    color: var(--orange);
+    color: #00fff7;
     text-transform: uppercase;
 }
 

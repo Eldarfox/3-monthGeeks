@@ -10,12 +10,20 @@
 }
 
 .maket {
-    min-width: 150px;
+    min-width: 350px;
     max-width: 350px;
+    max-height: 450px;
+    min-height: 450px;
     padding: 20px;
     border: 1px solid rgb(255, 165, 0);
     border-radius: 20px;
     margin: 0 auto;
+    transition: transform 0.30s
+}
+.maket:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    transition: transform 0.5s;
 }
 .tbody {
     color: white;

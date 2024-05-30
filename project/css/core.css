@@ -45,7 +45,7 @@ li {
 h1 {
     text-align: center;
     font-size: 70px;
-    color: white;
+    color: #2d7aeb;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -54,7 +54,7 @@ h1 {
 h2 {
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: #d00303;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -63,7 +63,7 @@ h2 {
 h3 {
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: #00d9ff;
     margin: 0 auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -120,6 +120,6 @@ input {
 }
 
 :root {
-    --orange: #ffa900;
+    --orange: #ffa500;
     --black: black;
 }
